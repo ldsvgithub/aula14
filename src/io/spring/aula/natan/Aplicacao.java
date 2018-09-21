@@ -1,5 +1,6 @@
 package io.spring.aula.natan;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -12,7 +13,7 @@ import org.springframework.web.filter.CorsFilter;
 
 @SpringBootApplication
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
-public class Aplicacao extends SpringBootServletInitializer {
+public class Aplicacao { //extends SpringBootServletInitializer {
 	
 	private static Class<Aplicacao> applicationClass = Aplicacao.class;
 	
@@ -24,9 +25,15 @@ public class Aplicacao extends SpringBootServletInitializer {
 	 * building 
 	 * a war and placing it in webapps folder of Tomcat. All you need is:
 	 */
+	/*
 	@Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(applicationClass);
+    }
+    */
+	
+	public static void main(String[] args) throws Exception {
+        SpringApplication.run(Aplicacao.class, args);
     }
 	
 	@Bean
