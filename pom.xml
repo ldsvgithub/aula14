@@ -8,10 +8,6 @@
 	<packaging>war</packaging>
 	<name>spring-aula1</name>
 	
-	<properties>
-          <start-class>io.spring.aula.natan.Aplicacao</start-class>
-	</properties>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -70,11 +66,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!--  
 				<configuration>
                     <mainClass>io.spring.aula.natan.Aplicacao</mainClass>
                 </configuration>
-                -->
                 <executions>
                     <execution>
                         <goals>
