@@ -72,7 +72,7 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>repackage</goal>
+                            <goal>deploy</goal>
                         </goals>
                         <configuration>
                             <finalName>spring-aula14</finalName>
