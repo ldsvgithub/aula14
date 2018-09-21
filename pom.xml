@@ -7,6 +7,7 @@
 	<artifactId>spring-aula1</artifactId>
     <version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
+	
 	<name>spring-aula14</name>
 	
 	<parent>
@@ -18,7 +19,6 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <!--<start-class>io.spring.aula.natan.Aplicacao</start-class>-->
     </properties>
 
 	<dependencies>
@@ -53,30 +53,10 @@
     </dependencies>
 
 	<build>
-		<sourceDirectory>src</sourceDirectory>
 		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-					<warSourceDirectory>WebContent</warSourceDirectory>
-				</configuration>
-			</plugin>
-
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!--  
-				<configuration>
-                    <mainClass>io.spring.aula.natan.Aplicacao</mainClass>
-                </configuration>
-                -->
                 <executions>
                     <execution>
                         <goals>
@@ -92,7 +72,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.3.2</version>
                 <configuration>
                     <finalName>spring-aula14</finalName>
                 </configuration>
