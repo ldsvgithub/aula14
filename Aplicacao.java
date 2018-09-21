@@ -25,10 +25,12 @@ public class Aplicacao extends SpringBootServletInitializer {
 	 * building 
 	 * a war and placing it in webapps folder of Tomcat. All you need is:
 	 */
+	/*
 	@Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(applicationClass);
     }
+    */
 	
 	public static void main(String[] args) {
         SpringApplication.run(applicationClass, args);
