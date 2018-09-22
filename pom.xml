@@ -75,8 +75,9 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
                 <executions>
                     <execution>
+                    <phase>package</phase>
                         <goals>
-                            <goal>repackage</goal>
+                            <goal>copy</goal>
                         </goals>
                         <configuration>
                             <finalName>spring-aula14</finalName>
