@@ -87,14 +87,6 @@
                     </execution>
                 </executions>
 			</plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <finalName>spring-aula14</finalName>
-                </configuration>
-            </plugin>
 		</plugins>
 	</build>
 </project>
