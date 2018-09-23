@@ -1,8 +1,18 @@
+/*
+*
+* Aula com Nataniel Paiva
+*
+* Esse projeto poderá ser distribuído da forma que você achar melhor
+* O importante é que você aprenda de verdade!
+*
+ */
 package io.spring.aula.natan.controller;
 
+import io.spring.aula.natan.entity.Usuario;
+import io.spring.aula.natan.repository.UsuarioRepository;
+import io.spring.aula.natan.service.UsuarioService;
 import java.security.Principal;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,18 +22,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.spring.aula.natan.entity.Usuario;
-import io.spring.aula.natan.repository.UsuarioRepository;
-import io.spring.aula.natan.service.UsuarioService;
-
+/**
+ *
+ * @author Nataniel Paiva <nataniel.paiva@gmail.com>
+ */
 @RestController
-//@RequestMapping("/spring-aula1")
 public class UsuarioController {
 
-	@Autowired
+    @Autowired
     UsuarioService usuarioService;
-	
-	@Autowired
+
+    @Autowired
     UsuarioRepository repository;
 
     @RequestMapping(value = "/usuario", method = RequestMethod.GET)
@@ -60,7 +69,7 @@ public class UsuarioController {
     public void deletar(@PathVariable String id) {
         this.usuarioService.deleteUsuario(id);
     }
-    
+
     @RequestMapping(value = "/usuario/logado", method = RequestMethod.GET)
     @ResponseBody
     public Usuario currentUserName(Principal principal) {

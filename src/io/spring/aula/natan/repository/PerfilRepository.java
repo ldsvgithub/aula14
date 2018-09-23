@@ -17,6 +17,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  */
 public interface PerfilRepository extends MongoRepository<Perfil, String> {
 
-    Perfil findByNome(String role_admin);
+    Perfil findByNome(String nome);
 
 }

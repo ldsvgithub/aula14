@@ -1,10 +1,15 @@
+/*
+*
+* Aula com Nataniel Paiva
+*
+* Esse projeto poderá ser distribuído da forma que você achar melhor
+* O importante é que você aprenda de verdade!
+*
+ */
 package io.spring.aula.natan.controller;
 
 import io.spring.aula.natan.entity.Perfil;
-import io.spring.aula.natan.entity.Usuario;
-import io.spring.aula.natan.repository.UsuarioRepository;
 import io.spring.aula.natan.service.PerfilService;
-import io.spring.aula.natan.service.UsuarioService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -14,12 +19,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ *
+ * @author Nataniel Paiva <nataniel.paiva@gmail.com>
+ */
 @RestController
-//@RequestMapping("/spring-aula1")
 public class PerfilController {
 
-	@Autowired
-	PerfilService perfilService;
+    @Autowired
+    PerfilService perfilService;
 
     @RequestMapping(value = "/perfil", method = RequestMethod.GET)
     public List<Perfil> listar() {
@@ -35,6 +43,7 @@ public class PerfilController {
     public Page<Perfil> listaPaginada(@PathVariable int page, @PathVariable int count) {
         return this.perfilService.listaPaginada(count, page);
     }
+
 
     @RequestMapping(value = "/perfil", method = RequestMethod.POST)
     public Perfil salvar(@RequestBody Perfil perfil) {

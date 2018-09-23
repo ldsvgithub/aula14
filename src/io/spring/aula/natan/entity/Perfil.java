@@ -9,7 +9,7 @@ import org.springframework.security.core.GrantedAuthority;
  * @author Nataniel Paiva <nataniel.paiva@gmail.com>
  */
 @Document
-public class Perfil implements GrantedAuthority{
+public class Perfil implements GrantedAuthority {
 
     @Id
     private String id;
@@ -22,6 +22,8 @@ public class Perfil implements GrantedAuthority{
     public Perfil(String nome) {
         this.nome = nome;
     }
+    
+    
 
     public String getId() {
         return id;
