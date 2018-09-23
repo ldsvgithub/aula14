@@ -13,7 +13,7 @@ import org.springframework.web.filter.CorsFilter;
 
 @SpringBootApplication
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
-public class Aplicacao { //extends SpringBootServletInitializer {
+public class Aplicacao extends SpringBootServletInitializer {
 	
 	private static Class<Aplicacao> applicationClass = Aplicacao.class;
 	
