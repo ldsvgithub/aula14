@@ -78,9 +78,12 @@
                         <goals>
                             <goal>repackage</goal>
                         </goals>
-                        <configuration>
-                            <finalName>spring-aula14</finalName>
-                        </configuration>
+                            <configuration>
+		                <classifier>spring-boot</classifier>
+		                <mainClass>
+		                  io.spring.aula.natan.Aplicacao
+		                </mainClass>
+                        </configuration>	
                     </execution>
                 </executions>
 			</plugin>
